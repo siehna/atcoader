@@ -73,3 +73,31 @@ print('Bad' if code[0]==code[1] or code[1]==code[2] or code[2]==code[3] else 'Go
 
 # ABC132
 ## A- Fifty-Fifty
+>2種類の文字が2つずつあるかのチェック
+```
+# ソートして文字を寄せる
+s = sorted(input())
+# 寄せた文字で条件をかける
+if s[0] == s[1] and s[2] == s[3] and s[0] != s[2]:
+    print("Yes")
+else:
+    print("No")
+```
+
+# ABC133
+## A- T or T
+>2つの最小値
+```
+n, a, b = map(int, input().split())
+# ２つの最小値
+print(min(b,a*n))
+```
+
+# ABC134
+## A- Dodecagon
+>公式に従った求積
+```
+r = int(input())
+# 公式に従った求積
+print(3*r**2)
+```
