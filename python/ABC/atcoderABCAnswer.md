@@ -101,3 +101,55 @@ r = int(input())
 # 公式に従った求積
 print(3*r**2)
 ```
+
+# ABC135
+## A- Harmony
+>中間値Kを求める。不可能ならIMPOSSIBLE
+```
+a, b = map(int, input().split())
+
+# 演算子 %は余りを出す //は小数切り捨てて整数値を出す
+if (a + b) % 2 == 0:
+    print((a+b)//2)
+else:
+    print('IMPOSSIBLE')
+```
+
+# ABC136
+## A- Transfer
+>水を移し替えた時の余り
+```
+a, b, c = map(int, input().split())
+
+# a-b 容器１の空き容量
+# 容器2の余り量を求める
+ans = c - (a-b)
+if ans < 0 :
+    print(0)
+else :
+    print(ans)
+```
+
+# ABC137
+## A- +-x
+>最大を求める
+```
+a, b = map(int, input().split())
+
+# 最大を求める
+print(max(a+b, a-b, a*b))
+```
+
+# ABC138
+## A- Red or Not
+>aが特定値以下の時Redと表示
+```
+a = int(input())
+s = input()
+
+if a < 3200:
+    print('red')
+else :
+    print(s)
+```
+## B- Resistors in Parallel
