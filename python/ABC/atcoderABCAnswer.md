@@ -132,7 +132,7 @@ else :
 
 # ABC137
 ## A- +-x
->最大を求める
+>計算値の最大を求める
 ```
 a, b = map(int, input().split())
 
@@ -140,9 +140,19 @@ a, b = map(int, input().split())
 print(max(a+b, a-b, a*b))
 ```
 ## B- One Clue
->
+>上限・下限のある範囲計算
 ```
+# 2,000,001 個の石が並べられている（座標 -1,000,000 ~ 1,000,000）
+# K個の連続した石が黒、他は白
+# 座標Xが黒の時、黒の存在範囲を全て小さい順に表示する
 
+k, x = map(int, input().split())
+
+first = max(-1000000, x-k+1)
+end = min(1000000, x+k-1)
+
+for i in range(first, end+1):
+    print(i)
 ```
 
 # ABC138
@@ -158,3 +168,16 @@ else :
     print(s)
 ```
 ## B- Resistors in Parallel
+>逆数の和の逆数計算
+```
+n = int(input())
+aa = list(map(int, input().split()))
+
+g = 0
+
+# for 文書きたくねぇ せめてリスト内包表記で
+for a in aa:
+    g += 1 / a
+
+print(1 / g)
+```
